@@ -1,27 +1,113 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Electron Boilerplate</title>
+    <meta charset="utf-8">
+    <title>JWalk</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../src/photon/css/photon.css">
+
+    <!-- Javascript -->
+    <!-- <script src="../src/menu/menu.js" charset="utf-8"></script> -->
 </head>
+
 <body>
 
-  <div id="app" class="container" style="display: none;">
-    <h1 id="greet"></h1>
-    <p>
-      Welcome to <a href="http://electron.atom.io" class="js-external-link">Electron</a> app running on this <strong id="os"></strong> machine.
-    </p>
-    <p>
-      App author: <strong id="author"></strong>
-    </p>
-    <p>
-      Environment: <strong id="env"></strong>
-    </p>
-    <p>
-      Electron version: <strong id="electron-version"></strong>
-    </p>
-  </div>
+    <!-- <div id="app" class="container" style="display: none;">
+        <h1 id="greet"></h1>
+        <p>
+            Welcome to <a href="http://electron.atom.io" class="js-external-link">Electron</a> app running on this <strong id="os"></strong> machine.
+        </p>
+        <p>
+            App author: <strong id="author"></strong>
+        </p>
+        <p>
+            Environment: <strong id="env"></strong>
+        </p>
+        <p>
+            Electron version: <strong id="electron-version"></strong>
+        </p>
+    </div> -->
+    <div class="window">
+        <!-- .toolbar-header sits at the top of your app -->
+        <header class="toolbar toolbar-header padded-less">
+          <!-- <div class="toolbar-actions"> -->
+          <div class="btn-group pull-left">
+            <button class=" btn btn-default ">
+              <span id="load-file" class="icon icon-folder "></span>
+            </button>
+          </div>
+          <!-- </div>
+          <div class="form-actions pull-right "> -->
+          <!-- <div class="pull-right"> -->
+          <div class="pull-right">
+            <input type="text " style="border: 0px solid transparent" placeholder="Search Text " id="searchText">
+            <button id="search-submit" type="submit " class="btn btn-form btn-primary ">Search</button>
+          </div>
+          <!-- </div> -->
+          <!-- </div> -->
+        </header>
 
-  <script src="app.js"></script>
+        <!-- Your app's content goes inside .window-content -->
+        <div class="window-content">
+          <div class="pane-group">
+            <!-- <div id="app " class="container " style="display: none; "> -->
+            <!-- <h1 id="greet "></h1> -->
+            <p>
+              <!-- <button id="new-window "> View New Window </button> -->
+              <!-- <button id="new-window"> View New Window </button> -->
+            </p>
+            <!-- <p>
+                Welcome to <a href="http://electron.atom.io " class="js-external-link ">Electron</a> app running on this <strong id="os "></strong> machine.
+            </p>
+            <p>
+                App author: <strong id="author "></strong>
+            </p>
+            <p>
+                Environment: <strong id="env "></strong>
+            </p>
+            <p>
+                Electron version: <strong id="electron-version "></strong>
+            </p> -->
+            <div class="pane ">
+              <table class="table-striped " id="resultTable">
+                  <thead>
+                      <tr>
+                          <th>No</th>
+                          <th>Node</th>
+                          <th>Option/Value</th>
+                      </tr>
+                  </thead>
+                  <tbody id="resultTableBody">
+                      <!--<tr>-->
+                          <!--<td>photon.css</td>-->
+                          <!--<td>28K</td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td>photon.css</td>-->
+                          <!--<td>28K</td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td>photon.css</td>-->
+                          <!--<td>28K</td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td>photon.css</td>-->
+                          <!--<td>28K</td>-->
+                      <!--</tr>-->
+                  </tbody>
+              </table>
+              <div id="text"></div>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      <footer class="toolbar toolbar-footer ">
+        <h1 id="load-filename" class="title pull-left ">No file selected.</h1>
+      </footer>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
